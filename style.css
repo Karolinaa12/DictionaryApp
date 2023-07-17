@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
+* {
+  font-family: "Poppins", sans-serif;
+}
 body {
-  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   margin: 0;
   display: flex;
@@ -13,29 +13,38 @@ body {
 }
 
 .wrapper {
-  width: 600px;
+  width: 90vmin;
   margin: 50px auto;
   padding: 80px 50px;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
   background-color: #fff;
+  box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
 }
 
 .form-bar {
-  font-family: "Roboto", sans-serif;
   width: 70%;
   border: none;
   border-bottom: solid 3px #ae9cff;
   padding: 8px 0;
 }
 
-.btn.search {
-  font-family: "Roboto", sans-serif;
+input:focus {
+  outline: none;
+}
 
+.btn.search {
   color: #fff;
   background-color: #ae9cff;
   border-radius: 5px;
   border: none;
+  outline: none;
   padding: 10px 20px;
-  margin-left: 20px;
+  margin: 10px 20px;
+}
+
+.btn.search:hover {
+  background-color: hsl(251, 52%, 68%);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
