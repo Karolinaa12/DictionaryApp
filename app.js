@@ -1,4 +1,7 @@
 const greetingHeader = document.querySelector("#greeting");
+const url = `https://api.dictionaryapi.dev/api/v2/entries/en/`;
+
+const btn = document.querySelector("#search");
 
 function greetingHandler() {
   let hour = new Date().getHours();
@@ -12,5 +15,12 @@ function greetingHandler() {
     greetingHeader.innerHTML = "Welcome";
   }
 }
+
+btn.addEventListener("click", function (e) {
+  e.preventDefault;
+  let inputWord = document.querySelector("#word").value;
+
+  console.log(`${url}${inputWord}`);
+});
 
 greetingHandler();
