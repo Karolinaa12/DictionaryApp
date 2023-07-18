@@ -1,7 +1,7 @@
 const greetingHeader = document.querySelector("#greeting");
 const url = `https://api.dictionaryapi.dev/api/v2/entries/en/`;
-
 const btn = document.querySelector("#search");
+const wordDisplay = document.querySelector(".word");
 
 function greetingHandler() {
   let hour = new Date().getHours();
@@ -18,9 +18,17 @@ function greetingHandler() {
 
 btn.addEventListener("click", function (e) {
   e.preventDefault;
-  let inputWord = document.querySelector("#word").value;
+  let inputWord = document.querySelector("#inp-word").value;
+  fetch(`${url}${inputWord}`)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      wordDisplay.innerHTML = data[0].word;
+      document.querySelector(".meaning").innerHTML =
+        data[0].meanings[0].definitions[0].definition;
+    });
 
-  console.log(`${url}${inputWord}`);
+  document.querySelector("#inp-word").value = "";
 });
 
 greetingHandler();
