@@ -23,7 +23,7 @@ body {
 }
 
 .form-bar {
-  width: 70%;
+  width: 100%;
   border: none;
   border-bottom: solid 3px #ae9cff;
   padding: 8px 0;
@@ -34,13 +34,13 @@ input:focus {
 }
 
 .btn.search {
+  width: 100%;
   color: #fff;
   background-color: #ae9cff;
   border-radius: 5px;
   border: none;
   outline: none;
   padding: 10px 20px;
-  margin: 10px 20px;
 }
 
 .btn.search:hover {

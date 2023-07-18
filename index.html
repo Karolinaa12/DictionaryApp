@@ -8,21 +8,31 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="wrapper">
       <i></i>
-      <h1 id="greeting">Hello!</h1>
-      <form class="search-box">
-        <input
-          type="text"
-          class="form-bar"
-          placeholder="Type your word..."
-          id="word"
-        />
+      <h1 class="mb-5" id="greeting">Hello!</h1>
+      <div class="row">
+        <div class="col-md-9"><form class="search-box">
+          <input
+            type="text"
+            class="form-bar mb-2"
+            placeholder="Type your word..."
+            id="word"
+          /></div>
+        <div class="col-md-3"> <input type="button" value="Search" class="btn search mb-2" id="search" /></div>
+      </div>
+      
 
-        <input type="button" value="Search" class="btn search" id="search" />
+       
       </form>
     </div>
 
