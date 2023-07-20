@@ -27,10 +27,13 @@ btn.addEventListener("click", () => {
       </div>
       <div class="details">
         <p>${data[0].meanings[0].partOfSpeech}</p>
-        <p>${data[0].phonetics[1].text}</p>
+        <p>${data[0].phonetic || data[0].phonetics[1].text}</p>
       </div>
       <p class="word-meaning">
-        ${data[1].meanings.definitions[0].definition}
+        ${data[0].meanings[0].definitions[0].definition}
+        </p>
+        <p class="word-example">
+        ${data[0].meanings[0].definitions[0].example || ""}
         </p>`;
     });
 
