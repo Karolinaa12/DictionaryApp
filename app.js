@@ -24,6 +24,8 @@ btn.addEventListener("click", () => {
       console.log(data);
       result.innerHTML = `<div class="word">
         <h3>${inputWord}</h3>
+        <button><i class="fa-solid fa-volume-high"></i>
+        </button>
       </div>
       <div class="details">
         <p>${data[0].meanings[0].partOfSpeech}</p>
@@ -36,8 +38,8 @@ btn.addEventListener("click", () => {
         ${data[0].meanings[0].definitions[0].example || ""}
         </p>`;
     })
-    .catch((data) => {
-      result.innerHTML = `<h3 class="error" >Error</h3>`;
+    .catch(() => {
+      result.innerHTML = `<h3 class="error" >No Definitions Found...</h3>`;
     });
 
   document.querySelector("#inp-word").value = "";

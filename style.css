@@ -1,4 +1,4 @@
-* {
+*:not(i) {
   font-family: "Poppins", sans-serif;
 }
 body {
@@ -47,4 +47,50 @@ input:focus {
   background-color: hsl(251, 52%, 68%);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+}
+
+.result {
+  position: relative;
+}
+.result h3 {
+  font-size: 30px;
+}
+
+.result button {
+  background-color: transparent;
+  color: #ae9cff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+.result .details {
+  display: flex;
+  gap: 10px;
+  color: #b3b6d4;
+  margin: 5px 0 20px 0;
+  font-size: 14px;
+}
+
+.result .word {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.word-meaning {
+  color: #575a7b;
+}
+
+.word-example {
+  color: #575a7b;
+  font-style: italic;
+  border-left: 5px solid #ae9cff;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.error {
+  margin-top: 80px;
+  text-align: center;
 }
