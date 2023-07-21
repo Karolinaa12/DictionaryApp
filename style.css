@@ -24,6 +24,7 @@ div.wrapper {
 input.form-bar {
   width: 100%;
   border: none;
+  border-radius: 0;
   border-bottom: solid 3px #ae9cff;
   padding: 8px 0;
 }
