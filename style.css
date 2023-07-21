@@ -13,7 +13,7 @@ body {
 
 div.wrapper {
   width: 90vmin;
-  margin: 50px auto;
+  margin: 50px auto 10px;
   padding: 80px 50px;
   border-radius: 10px;
   border: none;
@@ -98,4 +98,17 @@ div.result .word {
 .error-sub {
   text-align: center;
   color: #575a7b;
+}
+
+footer {
+  font-size: 0.8rem;
+  color: #575a7b;
+}
+
+footer a {
+  text-decoration: none;
+  color: #575a7b;
+}
+footer a:hover {
+  color: #35374b;
 }
