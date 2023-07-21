@@ -2,6 +2,7 @@ const greetingHeader = document.querySelector("#greeting");
 const url = `https://api.dictionaryapi.dev/api/v2/entries/en/`;
 const btn = document.querySelector("#search");
 const result = document.getElementById("result");
+const sound = document.getElementById("sound");
 
 function greetingHandler() {
   let hour = new Date().getHours();
@@ -22,9 +23,10 @@ btn.addEventListener("click", () => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
+      console.log(data[0].phonetics[0].audio);
       result.innerHTML = `<div class="word">
         <h3>${inputWord}</h3>
-        <button><i class="fa-solid fa-volume-high"></i>
+        <button onclick="playSound()"><i class="fa-solid fa-volume-high"></i>
         </button>
       </div>
       <div class="details">
@@ -37,6 +39,14 @@ btn.addEventListener("click", () => {
         <p class="word-example">
         ${data[0].meanings[0].definitions[0].example || ""}
         </p>`;
+      sound.setAttribute(
+        "src",
+        `${
+          data[0].phonetics[0].audio ||
+          data[0].phonetics[1].audio ||
+          data[0].phonetics[2].audio
+        }`
+      );
     })
     .catch(() => {
       result.innerHTML = `<h3 class="error" >No Definitions Found...</h3>`;
@@ -44,5 +54,9 @@ btn.addEventListener("click", () => {
 
   document.querySelector("#inp-word").value = "";
 });
+
+function playSound() {
+  sound.play();
+}
 
 greetingHandler();
