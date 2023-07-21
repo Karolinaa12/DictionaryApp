@@ -12,7 +12,7 @@ body {
   overflow: hidden;
 }
 
-.wrapper {
+div.wrapper {
   width: 90vmin;
   margin: 50px auto;
   padding: 80px 50px;
@@ -22,14 +22,14 @@ body {
   box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
 }
 
-.form-bar {
+input.form-bar {
   width: 100%;
   border: none;
   border-bottom: solid 3px #ae9cff;
   padding: 8px 0;
 }
 
-input:focus {
+input.form-bar:focus {
   outline: none;
 }
 
@@ -49,14 +49,14 @@ input:focus {
   transition: all 0.2s ease-in-out;
 }
 
-.result {
+div.result {
   position: relative;
 }
-.result h3 {
+div.result h3 {
   font-size: 30px;
 }
 
-.result button {
+div.result button {
   background-color: transparent;
   color: #ae9cff;
   border: none;
@@ -64,7 +64,7 @@ input:focus {
   font-size: 18px;
 }
 
-.result .details {
+div.result .details {
   display: flex;
   gap: 10px;
   color: #b3b6d4;
@@ -72,7 +72,7 @@ input:focus {
   font-size: 14px;
 }
 
-.result .word {
+div.result .word {
   display: flex;
   justify-content: space-between;
   margin-top: 80px;
@@ -91,6 +91,11 @@ input:focus {
 }
 
 .error {
-  margin-top: 80px;
+  margin-top: 60px;
   text-align: center;
+}
+
+.error-sub {
+  text-align: center;
+  color: #575a7b;
 }

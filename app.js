@@ -49,7 +49,7 @@ btn.addEventListener("click", () => {
       );
     })
     .catch(() => {
-      result.innerHTML = `<h3 class="error" >No Definitions Found...</h3>`;
+      result.innerHTML = `<h3 class="error" >No Definitions Found...</h3><h4 class="error-sub">Try a different word</h4>`;
     });
 
   document.querySelector("#inp-word").value = "";
