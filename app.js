@@ -17,7 +17,8 @@ function greetingHandler() {
   }
 }
 
-btn.addEventListener("click", () => {
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
   let inputWord = document.querySelector("#inp-word").value;
   fetch(`${url}${inputWord}`)
     .then((response) => response.json())
